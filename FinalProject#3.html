@@ -1,0 +1,732 @@
+<head>
+    <title>How to Bake your Own Raspberry Pi</title>
+    <link rel="stylesheet" href="assets/css/reset.css" type="text/css">
+    <link rel="stylesheet" href="assets/css/main.css" type="text/css">
+    <link rel="stylesheet" href="assets/css/page-1.css" type="text/css">
+    <link rel="stylesheet" href="assets/css/grid.css" type="text/css">    
+    <link rel="stylesheet" href="assets/css/colour.css" type="text/css">
+    <link rel="stylesheet" href="assets/css/scrolling-text.css" type="text/css">
+    <script src="assets/js/jquery-3.4.1.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/slide.js"></script>
+    <link rel="stylesheet" href="https://use.typekit.net/hne3lwz.css">
+    <link rel="stylesheet" href="https://use.typekit.net/ulz4eor.css">
+  </head>
+
+  <body>
+
+    <div class="scrolling-text">
+          <marquee behavior="scroll" direction="left" scrollamount="14">
+            You can do it!
+               
+            You can totally do this.
+               
+            Keep going.
+               
+            You can do anything you set your mind to.
+               
+            If you’re confused, it's okey.
+               
+            You are doing great.
+               
+            Don't give up.
+               
+            No pressure, no diamonds..
+               
+            "One of the best programming skills you can have is knowing when to walk away for awhile." - Oscar Godson
+               
+            Keep going. Be all in.
+
+            Keep going. 
+
+          </marquee>
+    </div>
+
+
+    <!-- start page here -->
+    <div class="grid">
+      <div class="col w-1of3">
+        <div class="content stay">
+          <div class="title-1">HOW TO BAKE</div>
+          <div class="title-2">YOUR OWN</div>
+          <div class="title-3">RASPBERRY PI</div>
+      </div>
+
+      <div class="col w-2of3">
+        <div class="content-1 nav">
+          <a href="#facts"><div class="nav-item-1">What Is It?</div></a>
+          <a href="#types"><div class="nav-item-2">Python</div></a>
+          <a href="#stats"><div class="nav-item-3">SenseHAT</div></a>
+        </div>
+      </div>
+  </div>
+
+      <div class="content-2 offset-left scroll-box">
+        <div class="text">
+          <br><br><br><br>
+          This website will help you to set up and explore your Raspberry Pis, understand what they are, and what you can do with it!
+          <br><br>
+          Pair up with the person next to you, and ask questions or offer help whenever you can. If you finish first, help your peers catch up.
+          <br><br>
+          Don't forget to label your pi and accessories! Everyone’s Pi and power supply looks the same. Labeling will help me get it back to you if you forget something.
+          <br><br><br><br><br><br><br>
+        </div>
+
+        <div class="text" id="facts">
+          <br><br><span class="highlight-1">What is a Raspberry Pi?</span>
+          <br><br>Its a fully featured, internet connected Linux computer that is easy to embed into prototypes (in other words, a low cost, credit card sized computer)
+          <br><br>It's also a platform for interactive devices and the Internet of Things (GPIO pins and HAT extensions make it easy to add  sensors, physical controls, outputs and interfaces to your projects).
+         <div href="#"><img src="1200px-Raspberry_Pi_Vector_Illustration.svg.png"></div>
+
+          
+          <br><br><span class="highlight-1">Fun Pi-powered projects</span>
+          <br><br>The following are some examples of projects powered by Pi
+          
+          <br><br><br><span class="highlight-1">Black Mirror</span>
+          <br><br>Interactive AR mirror with facial recognition that provides live news and weather data (https://magicmirror.builders/)
+          <br><br><div href="#"><img src="magicmirror.jpg"></div>
+          
+          <br><br><span class="highlight-1">Wildlife Camera w/ Object Recognition</span>
+          <br><br>Cheap but effective way to capture some excellent close-ups of foxes, birds, mice, squirrels and badgers using object detection, and tweet the results (https://www.raspberrypi.org/magpi/wildlife-camera-object-recognition/).
+          <br><br><div href="#"><img src="wildlife.jpg"></div>
+         
+
+          <br><br><span class="highlight-1"> Raspberry Pi vs. Arduino, what gives?</span>
+          <br>
+
+          <br><br><span class="highlight-1">Rpi - Microprocessor</span>
+          <br><div href="#"><img src="1200px-Raspberry_Pi_Vector_Illustration.svg.png"></div>
+          <br>Good for processing data
+          <br>Linux OS
+          <br>HDMI/ Audio output/ USB / Wifi/ Bluetooth
+          <br>Only digital GPIO pins
+          <br>High power consumption - 750mW+
+
+          <br><br><br><span class="highlight-1">Arduino - Microcontroller</span>
+          <br><br><div href="#"><img src="Arduino_uno.png"></div>
+          <br>Good at controlling inputs/outputs
+          <br>Only runs the code you put on it. No OS or firmware
+          <br>Digital and Analog GPIO pins
+          <br>Low power consumption -  175mW
+
+          <br><br><br><span class="highlight-1">Choose Arduino for:</span>
+          <br><br>Controlling lots of sensors, small LCDs and motors, low power applications (ie. battery powered projects) and analog sensors.
+
+          <br><br><br><span class="highlight-1">Choose Raspberry Pi for:</span>
+          <br><br>Handling video or graphic interfaces, projects that process lots of data ( ie. data visualization ) and computer vision and other performance-dependant processes.
+          <br><br>Arduino vs Raspberry Pi reference:https://www.youtube.com/watch?v=7vhvnaWUZjE
+
+          <br><br><div href="#"><img src="BlueRBPImage.png" class="play-btn"></div>
+
+        </div>
+
+
+        <div class="text">
+          <span class="highlight-1">Lets Get Started</span>
+          <br><br>What you will need:
+          <br><br>(Hardware)
+          <br>A monitor with a cable (and, if needed, an HDMI adaptor)
+          <br>A USB keyboard and mouse
+          <br>A power supply
+          <br>Raspberry Pi, and SD card
+          <br><br>(Software)
+          <br>Raspbian, installed via NOOBS
+
+          <br><br><br><span class="highlight-1">Attach UBS/Power Last</span>
+          <br><br>Just like with Arduino, we want to make sure that our circuits are complete before powering. With Raspberry Pi, this also ensures all peripherals initialize properly while it boots up. Make sure your Pi is off while making changes to attached circuits.
+          <br><br><div href="#"><img src="pi-labelled.png"></div> 
+
+
+          <br><br><span class="highlight-1">STEP #1</span>
+          <br><br>Install the Micro SD card in the back.
+          <br><br><div href="#"><img src="pi-sd.png"></div>
+          <br><div href="#"><img src="sd-card-holder.png"></div>
+          
+          <br><br><span class="highlight-1">STEP #2</span>
+          <br><br>Plug in the HDMI.
+          <div href="#"><img src="pi-3-hdmi.png"></div>
+
+          <br><br><span class="highlight-1">STEP #3</span>
+          <br><br>Plug in a USB Mouse.
+          <br><br><div href="#"><img src="pi-mouse.png"></div>
+
+          <br><br><span class="highlight-1">STEP #4</span>
+          <br><br>Plug in a USB Keyboard.
+          <br><br><div href="#"><img src="pi-keyboard.png"></div>
+
+          <br><br><span class="highlight-1">STEP #5</span>
+          <br><br>Plug in the Power adapter to Micro USB.
+          <br><br><div href="#"><img src="pi-power.png"></div>
+
+        </div>
+
+        <div class="text">
+          <span class="highlight-1">Raspbian Install</span>
+          <br><br>This screen (NOOBS) allows us to choose an operating system to install. These cards come preinstalled, but a fresh setup would require moving some files onto the SD card. Choose Raspbian and click Install.
+          <br><br><div href="#"><img src="setup.png"></div>
+          <br><div href="#"><img src="homepage.png"></div>
+
+          <br><br><span class="highlight-1">One Last Setup Set</span>
+          <br><br>The setup wizard will walk you though setting location (for time), keyboard type (usually US layout), and changing the system password. These can all be changed later, through the “Raspberry Pi Configuration”  menu item.
+          <br><br><div href="#"><img src="resource7.png"></div>
+          <br><div href="#"><img src="resource6.png"></div>
+          
+          <br><br><span class="highlight-1">Explore your Pi!</span>
+          <br><br>Finished installing? Awesome! Let’s take a closer look inside
+          <br>Network name: ECUAD_IXDLab
+          <br>Password: Design_The_Future
+
+          <br><br><span class="highlight-1">Lets browse the web!</span>
+          <br><br>design.ecuad.ca/rpi
+          <br>The Pi can be used as a full-featured web browser. This page is a collection of reference links for the raspberry pi workshops, and also these slides.
+
+          <br><br><span class="highlight-1">What can this thing do?</span>
+          <br><br>Find a game on your RPi, and try it out! What other applications are already installed?
+          <br><br><div href="#"><img src="BlueRBPImage.png" class="play-btn"></div>
+          
+
+          <br><br><br><br><br><br>
+          <span class="highlight-1">Workshop 2</span>
+          <br><br>Review exploration: What did you find or do on your pi that was different from what we did with Arduino?
+
+          <br><br><br><span class="highlight-1">VNC Remote Desktop</span>
+          <br><br>To start enable VNC and change hostname. 
+          <br>To do so, go to preferences > Raspberry Pi configuration. Change it to something unique like [ Yourname-pi ]. This allows us to find the pi without knowing its IP
+          <br><br><div href="#"><img src="resource5.png"></div>
+
+
+          <br><br><br><span class="highlight-1">Access your Pi remotely</span>
+          <br><br>TVNC tutorial  design.ecuad.ca/rpi ( Linux -> Set up VNC ). 
+          <br>Connecting at home, you may need a wired connection first to set up wifi over VNC( NOTE: a full class trying to use VNC streaming at once might be very slow ).
+          
+          <br><br><br><span class="highlight-1">VNC makes your Pi more flexible</span>
+          <br><br>Using your laptop’s screen, keyboard and mouse to drive the pi makes setup much more portable. You may still need a monitor/keyboard/mouse for some troubleshooting situations.
+          <br><br><div href="#"><img src="BlueRBPImage.png" class="play-btn"></div>
+
+          <br><br><br><br><br><br>
+          <div class="text" id="types">
+          <span class="highlight-1">Python</span>
+          <br><br>Let’s get some code running on our Pis
+
+          <br><br><br><span class="highlight-1">You’re already familiar with the Arduino IDE</span>
+          <br><br>The Arduino programming language is based on C, and used the Arduino IDE as the environment to program and run code.
+          <br><br><div href="#"><img src="resource4.png"></div>
+
+          <br><br><span class="highlight-1">Thonny is similar for Python</span>
+          <br><br>We’ll be using the Python programming language in the Thonny IDE. It’s very light on syntax ( easy for humans to read and write ), and interfaces well with RPi peripherals like SenseHAT.
+          <br><br><div href="#"><img src="resource3.png"></div>
+          
+          <br><br><span class="highlight-1">Python vs. Processing/Arduino</span>
+
+          <br><br><br><span class="highlight-1">Python</span>
+          <br><br>Interpreted, generally runs slower
+          <br>Typically less lines of code, and more human readable
+          <br>Indentation is part of the code, incorrect spacing will cause errors
+          <br>Dynamically typed variables, decided at run time
+          <br>Not tied to a specific IDE ( VS Code is a good one )
+          <br>No built in looping
+
+          <br><br><br><span class="highlight-1">Processing/Arduino</span>
+          <br><br>Compiled, generally runs faster
+          <br>More syntax
+          <br>Indentation is purely visual, but a good practice
+          <br>Statically typed variables (ie. int)
+          <br>Bundled with an IDE
+          <br>Have a built in looping function ( loop() or draw() )
+
+          <br><br><br><span class="highlight-1">Indentation</span>
+          <br><br>In Python, indentation is part of the code, replacing brackets. This means it will cause errors if incorrect. Can use either spaces or tabs, but it’s best to pick one.
+          <br><br><div href="#"><img src="resource2.png"></div>
+
+          <br><br><span class="highlight-1">Dynamic typing</span>
+          <br><br>Variables don’t need to be set to a specific type of data, and can change at runtime.
+          <br><br><div href="#"><img src="resource1.png"></div>
+
+          <br><br><span class="highlight-1">Hello, Python!</span>
+          <br><br>Your first line of code in Python: Hello World!
+          <br>Open a Thonny editor and type: 
+          <br>print(“hello world!”)
+          <br>Your first line of python code!
+          <br><br><div href="#"><img src="BlueRBPImage.png" class="play-btn"></div>
+          </div>
+
+          <div class="text" id="stats">
+          <br><br><span class="highlight-1">SenseHat</span>
+          <br><br>An add-on board including a grid of leds, and  lots of sensors including:
+          <br><br><div href="#"><img src="sensehat.jpg"></div>
+          <br>Gyroscope
+          <br>Accelerometer
+          <br>Magnetometer
+          <br>Temperature
+          <br>Barometric pressure
+          <br>Humidity
+          <br>Joystick/physical input
+          <div href="#"><img src="sense-hat.png"></div>
+
+
+          <br><span class="highlight-1">Sense HAT emulator</span>
+          <br><br>trinket.io/sense-hat
+          <br>Useful if you need to develop for your sense hat directly from your laptop. 
+          
+          <br><br><br><span class="highlight-1">Rpi Camera</span>
+          <br><br><div href="#"><img src="rpicamera.jpg"></div>
+          <br><br>High resolution (8MP) video and still camera. Great for motion tracking and computer vision projects. 
+
+
+          <br><br><br><span class="highlight-1">I can’t wait to program!</span>
+          <br><br>Programming isn’t magic made with math. It’s just giving a computer instructions in a way it can understand. You can already think like a computer.
+          <br><br>Morning Routine
+          <br><br>Get out of bed
+          <br>Go to the washroom
+          <br>Have a shower
+          <br>Make breakfast
+          <br>Eat breakfast
+          <br>etc.
+
+          <br><br><br><span class="highlight-1">What is an IDE?</span>
+          <br><br><div href="#"><img src="IDE.png"></div>
+          <br>An integrated development environment (IDE) is a software application is used to write, build and debug code. Essentially a text editor with code specific features. 
+          <br>Arduino IDE
+          <br>Processing
+          <br><br><div href="#"><img src="BlueRBPImage.png" class="play-btn"></div>
+
+      </div>
+      </div>
+      </div>
+
+</body>
+
+<style type="text/css">
+
+.grid {
+  display:flex;
+  flex-wrap:wrap;
+}
+
+.col {
+  padding:0px;
+}
+
+.col-1 {
+  padding:0px;
+  margin-top:auto;
+  position:fixed;
+}
+
+.content {
+  padding:0px;
+  line-height: 4pc;
+}
+
+.content-1 {
+  text-align:center;
+  z-index:3;
+}
+
+.content-2 {
+  padding:0px;
+  text-align:left;
+  position:relative;
+  top:0;
+  left:0;
+}
+
+.offset-left {
+  padding-top:12%;
+  margin-top:0%;
+  margin-left:50%;
+}
+
+.offset-left-2 {
+  padding-top:10vh;
+  margin-top:0%;
+  margin-left:50%;
+}
+
+.w-1of1 {
+  flex:0 0 100%;
+}
+
+.w-1of2 {
+  flex:0 0 50%;
+}
+
+.w-1of3 {
+  flex:0 0 33.3%;
+}
+
+.w-2of3 {
+  flex:0 0 66.6%;
+}
+
+.w-1of4 {
+  flex:0 0 25%;
+}
+
+body {
+  color:#2300FF;
+  background-color:white;
+}
+
+a {
+  color:#2300FF;
+  background-color:white;
+  text-decoration: none;
+
+}
+
+img {
+  width: 90%;
+  margin:auto;
+}
+
+.menu-link a {
+  color:#2300FF;
+}
+
+.menu-link {
+  opacity:0.5;
+}
+
+.menu-link:hover {
+  opacity:1;
+}
+
+.menu-nav {
+  position:fixed;
+  top:86vh;
+  width:5%;
+  left:0px;
+  text-align:left;
+  cursor:pointer;
+  z-index:5;
+}
+
+.on-it {
+  opacity:1;
+}
+
+.close-link {
+  color:#2300FF;
+  font-size:20px;
+}
+
+.close-link:hover {
+  text-decoration: underline;
+  cursor:pointer;
+}
+
+.about.active {
+  margin-left: 0%;
+  transition: 1s;
+}
+
+.contents {
+  padding:50px;
+  padding-top:250px;
+  font-size:28px;
+}
+
+.stay {
+  position:fixed;
+}
+
+.title-1 {
+  border-right: .10em solid transparent;
+  font-family: gitan-latin, sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  font-size:60px;
+  width:40vw;
+  margin-top:20px;
+  margin-left:20px;
+  display:flex;
+  animation: typing 1s steps(40, end), blink-caret .50s step-end 2;
+  overflow:hidden;
+  white-space: nowrap;
+}
+
+.title-2 {
+  border-right: .10em solid transparent;
+  font-family: gitan-latin, sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  font-size:60px;
+  margin-top:0px;
+  margin-left:20px;
+  display:flex;
+  animation: typing 1s steps(40, end), blink-caret .50s step-end 1;
+  overflow:hidden;
+  white-space: nowrap;
+  animation-delay:1s;
+  opacity:0;
+  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+}
+
+.title-3 {
+  border-right: .10em solid transparent;
+  font-family: gitan-latin, sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  font-size:60px;
+  width:40px;
+  margin-top:0px;
+  margin-left:20px;
+  display:flex;
+  animation: typing 1s steps(40, end), blink-caret .75s step-end 1;
+  white-space: nowrap;
+  animation-delay:2s;
+  overflow:hidden;
+  opacity:0;
+  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+}
+
+.play-btn{
+  width: 75px;
+  margin: 15px;
+}
+
+@keyframes typing {
+    from { 
+        width: 0%; 
+        opacity:0;
+    }
+    1% {opacity:1;}
+    to { 
+        width: 100%; 
+        opacity:1;
+    }
+    
+}
+
+
+@keyframes blink-caret {
+    from, to { 
+        border-color: transparent; 
+    }
+    50% { 
+        border-color: #2300FF; 
+    }
+}
+
+
+.nav {
+  width:40vw;
+  height:10vh;
+  position:fixed;
+  left:50vw;
+  top:0px;
+  display:flex;
+  text-align:left;
+  background-color:white;
+  box-shadow:0px 1px 0px blue;
+}
+
+.nav-2 {
+  width:40vw;
+  height:10vh;
+  position:fixed;
+  left:50vw;
+  top:0px;
+  display:flex;
+  text-align:left;
+  background-color:#FBDDEB;
+  box-shadow:0px 0px 0px #ff4f00;
+}
+
+.scroll-box {
+  display: block;
+/*  overflow-y: scroll;
+  scroll-behavior: smooth;*/
+  text-align: left;
+}
+
+.nav-item-1 {
+  font-family: myriad-pro-semiextended, sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 24px;
+  margin-top:30px;
+  text-align:left;
+  opacity:0.5;
+  text-decoration: none;
+}
+
+.nav-item-2 {
+  font-family: myriad-pro-semiextended, sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 24px;
+  margin-top:30px;
+  margin-left:60px;
+  text-align:left;
+  opacity:0.5;
+  text-decoration: none;
+}
+
+.nav-item-3 {
+  font-family: myriad-pro-semiextended, sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 24px;
+  margin-top:30px;
+  margin-left:60px;
+  text-align:left;
+  opacity:0.5;
+  text-decoration: none;
+}
+
+.nav-item-1:hover {
+  opacity:1;
+}
+
+.nav-item-2:hover {
+  opacity:1;
+}
+
+.nav-item-3:hover {
+  opacity:1;
+}
+
+.active {
+  opacity:1;
+}
+
+.nav-item-1-active {
+  font-family: myriad-pro-semiextended, sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 24px;
+  margin-top:74px;
+  text-align:left;
+  opacity:1;
+  text-decoration:none;
+}
+
+.nav-item-2-active {
+  font-family: myriad-pro-semiextended, sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 24px;
+  margin-top:74px;
+  margin-left:60px;
+  text-align:left;
+  opacity:1;
+  text-decoration:none;
+}
+
+.nav-item-3-active {
+  font-family: myriad-pro-semiextended, sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 24px;
+  margin-top:74px;
+  margin-left:60px;
+  text-align:left;
+  opacity:1;
+  text-decoration:none;
+}
+
+.text {
+  font-family: myriad-pro-semiextended, sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size:20px;
+  margin-right:150px;
+  line-height:26px;
+  margin-bottom:150px;
+}
+
+.highlight-1 {
+  font-family: myriad-pro, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size:24px;
+  margin-right:150px;
+  line-height:26px;
+  opacity:1;
+}
+
+.scrolling-text {
+  font-family: gitan-latin, sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  padding-top:12px;
+  font-size:24px;
+  width:100vw;
+  height:50px;
+  top:94vh;
+  left:0px;
+  background-color:#2300FF;
+  color:white;
+  position:fixed;
+  cursor:pointer;
+  z-index:1;
+  text-transform:uppercase;
+}
+
+<style style="text/css">
+.scroll-left {
+ width:100vw;
+ overflow: hidden;
+ position: relative;
+   margin:auto;
+
+}
+.scroll-left p {
+ position: absolute;
+ width: 100vw;
+ height: 50px;
+ margin: 0;
+ line-height: 100px;
+ text-align: right;
+ /* Starting position */
+ -moz-transform:translateX(100%);
+ -webkit-transform:translateX(100%);  
+ transform:translateX(100%);
+ /* Apply animation to this element */  
+ -moz-animation: scroll-left 5s linear infinite;
+ -webkit-animation: scroll-left 5s linear infinite;
+ animation: scroll-left 5s linear infinite;
+ z-index:3;
+}
+
+@-moz-keyframes scroll-left {
+ 0%   { -moz-transform: translateX(100%); }
+ 100% { -moz-transform: translateX(-100%); }
+}
+@-webkit-keyframes scroll-left {
+ 0%   { -webkit-transform: translateX(100%); }
+ 100% { -webkit-transform: translateX(-100%); }
+}
+@keyframes scroll-left {
+ 0%   { 
+ -moz-transform: translateX(100%); /* Browser bug fix */
+ -webkit-transform: translateX(100%); /* Browser bug fix */
+ transform: translateX(100%);     
+ }
+ 100% { 
+ -moz-transform: translateX(-100%); /* Browser bug fix */
+ -webkit-transform: translateX(-100%); /* Browser bug fix */
+ transform: translateX(-100%); 
+ }
+}
+</style>
+</style>
+
+<script type="text/javascript">
+
+  $( document ).ready(function() {
+    
+
+$('.menu-nav').click(function() {
+  $('.about').addClass('active');
+});
+
+$('.close-link').click(function() {
+  $('.about').removeClass('active');
+});
+});
+</script>
